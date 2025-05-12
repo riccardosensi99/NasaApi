@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { ApodData } from '../types';
 
-const API_KEY = 'process.env.REACT_APP_NASA_API_KEY';
+const API_KEY = process.env.REACT_APP_NASA_API_KEY;
 
 const Apod: React.FC = () => {
   const [data, setData] = useState<ApodData | null>(null);
