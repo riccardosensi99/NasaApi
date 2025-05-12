@@ -9,7 +9,7 @@ const Apod: React.FC = () => {
 
   useEffect(() => {
     axios
-      .get<ApodData>('https://api.nasa.gov/planetary/apod?api_key=' + API_KEY)
+      .get<ApodData>(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
       .then(res => setData(res.data))
       .catch(err => console.error(err));
   }, []);
